@@ -16,3 +16,11 @@ model User {
   password String
   email    String @unique
 }
+
+model Client {
+  id        String @id @default(auto()) @map("_id") @db.ObjectId
+  name      String
+  email     String @unique
+  telephone String
+  value     Float
+}
